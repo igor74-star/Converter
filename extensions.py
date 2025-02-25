@@ -1,5 +1,5 @@
 import requests
-from config import API_KEY  # Импортируем API_KEY из config.py
+from config import API_KEY
 
 class APIException(Exception):
     pass
@@ -10,7 +10,7 @@ class CurrencyConverter:
         url = f"https://v6.exchangerate-api.com/v6/{API_KEY}/pair/{base}/{quote}/{amount}"
         response = requests.get(url)
 
-        # Отладочная информация
+
         print(response.status_code)
         print(response.json())
 
